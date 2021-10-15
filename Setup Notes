@@ -1,0 +1,15 @@
+Rock > Scissor and Lizard
+Spock > Scissor and Rock
+Paper > Spock and Rock
+Scissor > Paper and Lizard
+Lizard > Spock and Paper
+
+~~Steps To Code~~
+1.Display rules
+2.Ask how many will be playing
+3.Display choices
+4.Each user picks their choices
+5. compare user choices
+6. print out winner of round
+7. repeat until best of 3 is achieved
+8. print overall winner / ask to play again choice
