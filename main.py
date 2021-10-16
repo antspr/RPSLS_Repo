@@ -1,7 +1,6 @@
 from player import Player
 from human import Human
 
-player_1 = Player()
 human_1 = Human()
 
 human_1.choose_gesture()
