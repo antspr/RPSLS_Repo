@@ -24,3 +24,9 @@ class Human(Player):
 
     counter = 0
     for option in gestures:
+
+
+if user_1_choice == "rock" and user_2_choice == "lizard" or "scissors":
+    print(f"{user_1_choice} crushes {user_2_choice}!")
+elif user_1_choice == "rock" and user_2_choice != "lizard" or "scissors":
+    print(f"{user_1_choice} is crushed by {user_2_choice}!")
