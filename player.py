@@ -1,18 +1,10 @@
 class Player:
-    def __init__(self, name):
-        self.name = name
-        self.human = True
+    def __init__(self):
+        self.name = ""
 
-    def choose_opponent(self):
-        opponent = input("""Which game mode would you like to play? 
-        Choose "1" for single player
-        Choose "2" multiplayer?""")
-        if opponent == '1':
-             self.human == False
-             
-        else:
-            self.human == True
-    
+    def choose_name(self):
+        self.name = input("Insert name: ")
+
     def choose_gesture(self):  # how to return value to be manipulated
         self.choice = input("""Which option would you like to pick?
         1 for rock,
