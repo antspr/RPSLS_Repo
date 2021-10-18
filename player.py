@@ -1,7 +1,8 @@
 class Player:
     def __init__(self):
         self.name = ""
-
+        self.wincounter = 0
+        self.choice =''
     def choose_name(self):
         self.name = input("Insert name: ")
 
