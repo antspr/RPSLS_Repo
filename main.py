@@ -1,12 +1,19 @@
-from player import Player
 from human import Human
+from rules import Rules
+rules_1 = Rules()
+player_1 = Human()
+player_2 =
 
-human_1 = Human()
-human_2 = Human()
 
-human_1.choose_gesture()
+player_1.choose_gesture()
 
-gestures = ["rock", "paper", "scissors", "lizard", "spock"]
 
-if human_1.choice == "rock":
-    human_1.rock_logic()
+gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
+
+if player_1.choice == "Rock":
+    rules_1.rock_logic()
+    print('user chose rock')
+
+
+
+
