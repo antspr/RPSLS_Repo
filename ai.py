@@ -4,7 +4,7 @@ import random
 from player import Player
 
 
-class ai(Player):
+class Ai(Player):
     def __init__(self):
 
         def choose_gesture(self):

@@ -13,6 +13,7 @@ class Player:
         4 is lizard,
         5 is spock
         """)
+        # move to human
         if self.choice == '1':
             self.choice = 'Rock'
         elif self.choice == '2':
