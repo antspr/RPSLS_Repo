@@ -10,7 +10,7 @@
             "name": "main.py",
             "type": "python",
             "request": "launch",
-            "program": "ai.py",
+            "program": "main.py",
             "console": "integratedTerminal"
         }
     ]

@@ -13,7 +13,5 @@ class Ai(Player):
         self.choice = random.choice(gestures)
         return self.choice
 
-ai = Ai()
-ai.choose_gesture()
-print(ai.choice)            
+           
             
