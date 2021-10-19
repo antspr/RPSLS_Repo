@@ -74,7 +74,7 @@ class Board():
             pass
 
     def rock_logic(self):
-         if self.player_2.choice == "lizard" or "scissors":
+         if self.player_2.choice == "Lizard" or "Scissors":
              print(f"{self.player_1.choice} crushes {self.player_2.choice}! ")
          else:
              print(f"{self.player_1.choice} is crushed by {self.player_2.choice}! ")
