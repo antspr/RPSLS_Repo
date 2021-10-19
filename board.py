@@ -1,9 +1,10 @@
-from types import NoneType
+
 from ai import Ai
 from player import Player
 from human import Human
 
 gestures = ["Rock", "Paper", "Scissors", "Lizard", "Spock"]
+
 
 class Board():
     def __init__(self):
@@ -29,8 +30,6 @@ class Board():
         Scissor > Paper and Lizard
         Lizard > Spock and Paper""")
 
-
-    
     def choose_opponent(self):
         opponent_chosen = False
         while opponent_chosen == False:
@@ -48,10 +47,12 @@ class Board():
                 print("Wrong input")
 
     def play_game(self):
-        round_count = 0
-        self.player_1_turn()
-        self.player_2_turn()
-        self.compare()
+        while self.player_1.win_counter < 2 and self.player_2.win_counter < 2:
+            self.player_1_turn()
+            self.player_2_turn()
+            self.compare()
+            self.check_winner()
+
     def player_1_turn(self):
         self.player_1.choose_gesture()
         return
@@ -73,20 +74,65 @@ class Board():
             self.spock_logic()
             pass
 
+    def check_winner(self):
+        if self.player_1.win_counter >= 2:
+            print(f"Congratulations {self.player_1.name} you have won! ")
+        elif self.player_2.win_counter >= 2:
+            print(f"Congratulations {self.player_2.name} you have won! ")
+
     def rock_logic(self):
+<<<<<<< HEAD
          if self.player_2.choice == "Lizard" or "Scissors":
              print(f"{self.player_1.choice} crushes {self.player_2.choice}! ")
          else:
              print(f"{self.player_1.choice} is crushed by {self.player_2.choice}! ")
+=======
+        if self.player_1.choice == self.player_2.choice:
+            print("Tie! ")
+        elif self.player_2.choice == "Lizard" or self.player_2.choice == "Scissors":
+            print(f"{self.player_1.choice} crushes {self.player_2.choice}! ")
+            self.player_1.win_counter += 1
+        else:
+            print(f"{self.player_1.choice} is beaten by {self.player_2.choice}! ")
+            self.player_2.win_counter += 1
+>>>>>>> c15032d907302b7a0591503a426fa969fc3b799f
 
     def paper_logic(self):
-         pass
+        if self.player_1.choice == self.player_2.choice:
+            print("Tie! ")
+        elif self.player_2.choice == "Spock" or self.player_2.choice == "Rock":
+            print(f"{self.player_1.choice} crushes {self.player_2.choice}! ")
+            self.player_1.win_counter += 1
+        else:
+            print(f"{self.player_1.choice} is beaten by {self.player_2.choice}! ")
+            self.player_2.win_counter += 1
 
     def scissors_logic(self):
-         pass
+        if self.player_1.choice == self.player_2.choice:
+            print("Tie! ")
+        elif self.player_2.choice == "Paper" or self.player_2.choice == "Lizard":
+            print(f"{self.player_1.choice} crushes {self.player_2.choice}! ")
+            self.player_1.win_counter += 1
+        else:
+            print(f"{self.player_1.choice} is beaten by {self.player_2.choice}! ")
+            self.player_2.win_counter += 1
 
     def lizard_logic(self):
-         pass
+        if self.player_1.choice == self.player_2.choice:
+            print("Tie! ")
+        elif self.player_2.choice == "Spock" or self.player_2.choice == "Paper":
+            print(f"{self.player_1.choice} crushes {self.player_2.choice}! ")
+            self.player_1.win_counter += 1
+        else:
+            print(f"{self.player_1.choice} is beaten by {self.player_2.choice}! ")
+            self.player_2.win_counter += 1
 
     def spock_logic(self):
-         pass
+        if self.player_1.choice == self.player_2.choice:
+            print("Tie! ")
+        elif self.player_2.choice == "Scissors" or self.player_2.choice == "Rock":
+            print(f"{self.player_1.choice} crushes {self.player_2.choice}! ")
+            self.player_1.win_counter += 1
+        else:
+            print(f"{self.player_1.choice} is beaten by {self.player_2.choice}! ")
+            self.player_2.win_counter += 1
