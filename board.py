@@ -81,12 +81,6 @@ class Board():
             print(f"Congratulations {self.player_2.name} you have won! ")
 
     def rock_logic(self):
-<<<<<<< HEAD
-         if self.player_2.choice == "Lizard" or "Scissors":
-             print(f"{self.player_1.choice} crushes {self.player_2.choice}! ")
-         else:
-             print(f"{self.player_1.choice} is crushed by {self.player_2.choice}! ")
-=======
         if self.player_1.choice == self.player_2.choice:
             print("Tie! ")
         elif self.player_2.choice == "Lizard" or self.player_2.choice == "Scissors":
@@ -95,7 +89,6 @@ class Board():
         else:
             print(f"{self.player_1.choice} is beaten by {self.player_2.choice}! ")
             self.player_2.win_counter += 1
->>>>>>> c15032d907302b7a0591503a426fa969fc3b799f
 
     def paper_logic(self):
         if self.player_1.choice == self.player_2.choice:
