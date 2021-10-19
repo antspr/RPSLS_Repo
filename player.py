@@ -1,7 +1,10 @@
+from gesture import Gesture
 class Player:
     def __init__(self):
         self.win_counter = 0
-        self.choice = ""
+        self.choice =""
+        self.gesture = Gesture()
+
 
     def choose_name(self):
         self.name = input("Insert name: ")
@@ -17,23 +20,23 @@ class Player:
             5 is spock
             """)
             if self.choice == "1":
-                self.choice = "Rock"
+                self.choice == self.gesture.list[0]
                 validation = True
                 return self.choice
             elif self.choice == "2":
-                self.choice = "Paper"
+                self.choice == self.gesture.list[1]
                 validation = True
                 return self.choice
             elif self.choice == "3":
-                self.choice = "Scissors"
+                self.choice == self.gesture.list[2]
                 validation = True
                 return self.choice
             elif self.choice == "4":
-                self.choice = "Lizard"
+                self.choice == self.gesture.list[3]
                 validation = True
                 return self.choice
             elif self.choice == "5":
-                self.choice = "Spock"
+                self.choice == self.gesture.list[4]
                 validation = True
                 return self.choice
             else:
